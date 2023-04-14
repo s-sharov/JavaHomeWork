@@ -14,18 +14,18 @@ public class Task4 {
         String currentTime = getCurrentTime();
         int intervalDay = getIntervalDay(currentTime);
         switch (intervalDay) {
-            case 1 -> {
+            case 1:
                 System.out.printf("Доброе утро, %s!%n", userName);
-            }
-            case 2 -> {
+                break;
+            case 2:
                 System.out.printf("Добрый день, %s!%n", userName);
-            }
-            case 3 -> {
+                break;
+            case 3:
                 System.out.printf("Добрый вечер, %s!%n", userName);
-            }
-            case 4 -> {
+                break;
+            case 4:
                 System.out.printf("Доброй ночи, %s!%n", userName);
-            }
+                break;
         }
 
     }
