@@ -3,10 +3,18 @@ import java.util.Random;
 
 public class HomeWork01 {
     public static void main(String[] args) {
-        int[] newArr = createArraySameValue(5, 11);
-        for (int item: newArr) {
-            System.out.print(item + " ");
-        }
+        //    1. Написать метод, принимающий на вход два аргумента: len и initialValue,
+        //    и возвращающий одномерный массив типа int длиной len, каждая ячейка которого равна initialValue;
+//        int lenArray = 3;
+//        int initialValueArray = 11;
+//        System.out.println("Создаем одномерный массив.");
+//        System.out.printf("Размер массива: %d%n", lenArray);
+//        System.out.printf("Значения в массиве будут равны: %d%n", initialValueArray);
+//        int[] newArr = createArraySameValue(lenArray, initialValueArray);
+//        for (int item: newArr) {
+//            System.out.print(item + " ");
+//        }
+        // end
     }
 
 //    1. Написать метод, принимающий на вход два аргумента: len и initialValue,
