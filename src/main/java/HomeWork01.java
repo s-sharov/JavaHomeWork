@@ -15,6 +15,21 @@ public class HomeWork01 {
 //            System.out.print(item + " ");
 //        }
         // end
+
+        //    2. Задать одномерный массив и найти в нем минимальный и максимальный элементы ;
+        int lenArray = 10;
+        int[] newArr = createRandomArray(lenArray);
+        int maxNumInArray = findMaxElemInArray(newArr);
+        int minNumInArray = findMinElemInArray(newArr);
+        System.out.println("Создаем одномерный массив");
+        System.out.println("_________________________");
+        for (int item: newArr) {
+            System.out.print(item + " ");
+        }
+        System.out.println("\n_________________________");
+        System.out.printf("Максимальное элемент в созданом массиве равен: %d%n", maxNumInArray);
+        System.out.printf("Минимальный элемент в созданом массиве равен: %d%n", minNumInArray);
+        // end
     }
 
 //    1. Написать метод, принимающий на вход два аргумента: len и initialValue,
@@ -24,12 +39,6 @@ public class HomeWork01 {
         Arrays.fill(arr, initialValue);
         return arr;
     }
-
-//    2. Задать одномерный массив и найти в нем минимальный и максимальный элементы ;
-
-
-
-
 
 
     public static int getRandomNumber(int min, int max) {
