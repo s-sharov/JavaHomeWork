@@ -15,20 +15,28 @@ public class Task1 {
     Параметры для фильтрации: {"name:null", "country:null", "city:null", "age:null"}
     Результат: SELECT * FROM USER;*/
     public static void init() {
-        JSONObject params = new JSONObject("{\"name\":\"Ivanov\", \"country\":\"Russia\", \"city\":\"Moscow\", \"age\":null}");
+        //JSONObject params = new JSONObject("{\"name\":\"Ivanov\", \"country\":\"Russia\", \"city\":\"Moscow\", \"age\":null}");
+        JSONObject params = new JSONObject("{\"name\":null, \"country\":null, \"city\":null, \"age\":null}");
         System.out.println(params);
         System.out.println(getQuery(params));
 
     }
 
     public static String getQuery(JSONObject params) {
-        StringBuilder stringBuilder = new StringBuilder("SELECT * FROM USER WHERE: ");
+        StringBuilder stringBuilder = new StringBuilder("SELECT * FROM USER");
+        boolean where = false;
         for (String key: params.keySet()) {
             if(!params.isNull(key)) {
-                stringBuilder.append(key).append(" = '").append(key).append("' and ");
+                if (!where) {
+                    stringBuilder.append(" WHERE ");
+                    where = true;
+                }
+                stringBuilder.append(key).append(" = '").append(params.opt(key)).append("' and ");
             }
         }
-        stringBuilder.delete(stringBuilder.toString().length()-5, stringBuilder.toString().length());
+        if (where) {
+            stringBuilder.delete(stringBuilder.toString().length()-5, stringBuilder.toString().length());
+        }
         return stringBuilder.toString();
     }
 
