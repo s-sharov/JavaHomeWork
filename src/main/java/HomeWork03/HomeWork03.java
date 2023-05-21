@@ -9,11 +9,4 @@ public class HomeWork03 {
         Task02.run();
         System.out.println("_________End Task 2__________");
     }
-
-
-
-
-
-
-
 }
